@@ -1,0 +1,507 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout}">
+
+<head>
+    <title>MyTittle</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <style>
+            .carousel {
+                margin-bottom: 4rem;
+            }
+
+            .carousel-caption {
+                bottom: 3rem;
+                z-index: 10;
+            }
+
+            .carousel-item {
+                height: 32rem;
+            }
+
+            .marketing .col-lg-4 {
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+
+            .marketing .col-lg-4 p {
+                margin-right: .75rem;
+                margin-left: .75rem;
+            }
+
+            .featurette-divider {
+                margin: 5rem 0;
+            }
+
+            .featurette-heading {
+                letter-spacing: -.05rem;
+            }
+
+            @media (min-width: 40em) {
+                .carousel-caption p {
+                    margin-bottom: 1.25rem;
+                    font-size: 1.25rem;
+                    line-height: 1.4;
+                }
+
+                .featurette-heading {
+                    font-size: 50px;
+                }
+            }
+
+            @media (min-width: 62em) {
+                .featurette-heading {
+                    margin-top: 7rem;
+                }
+            }
+        </style>
+
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-color: aqua;">
+                    <!-- <img th:src="@{/images/img3.jpg}" th:alt="ComputerSystemValidation" class="d-block w-100"
+                        style="object-fit: cover;" height="100%"> -->
+
+                    <div class="container">
+                        <div class="carousel-caption text-start text-dark">
+                            <h1>Computer System Validation</h1>
+                            <p class="opacity-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                                praesentium quo possimus quisquam unde, autem voluptatibus quae ea, deserunt accusantium
+                                animi blanditiis qui tenetur, sed in eum sequi excepturi odit.</p>
+                            <p><a class="btn btn-lg btn-secondary" href="#contact">Contact Us</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-color: aquamarine;">
+                    <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    </svg> -->
+
+                    <div class="container">
+                        <div class="carousel-caption text-light">
+                            <h1>Computer Automation</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In quisquam minima voluptatum
+                                dolorem dicta doloribus architecto sunt repudiandae impedit vero, maiores corporis
+                                voluptates sit reiciendis recusandae eum consequuntur ut fuga!</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    </svg>
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>Engineering Services</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda aut aliquam qui,
+                                rerum sunt consectetur quibusdam? Fugiat qui quam reprehenderit! Quis quo dolore ut
+                                maxime, omnis odit eos debitis itaque.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <style>
+            .feature-icon-small {
+                width: 3rem;
+                height: 3rem;
+            }
+        </style>
+        <div class="container marketing">
+            <div class="container px-4 py-5" id="featured-3">
+                <h2 class="pb-2 border-bottom">Columns with icons</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div class="feature col">
+                        <div
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                            <img th:src="@{/images/svgIcon.png}" th:alt="svgIcon" width="50" height="50">
+                        </div>
+
+                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                            sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Call to action
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <div style="margin-bottom: 4px;"
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#people-circle" />
+                            </svg>
+                        </div>
+                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                            sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Call to action
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="feature col">
+                        <div style="margin-bottom: 4px;"
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#toggles2" />
+                            </svg>
+                        </div>
+                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                            sentence and probably just keep going until we run out of words.</p>
+                        <a href="#" class="icon-link">
+                            Call to action
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .featurette img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                @media (min-width: 768px) {
+                    .featurette img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+
+                @media (min-width: 992px) {
+                    .featurette img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            </style>
+
+            <hr class="featurette-divider" id="features">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
+                            class="text-body-secondary">It’ll blow your mind.</span></h2>
+                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some
+                        exciting prose here.</p>
+                </div>
+                <div class="col-md-5">
+                    <img th:src="@{/images/img.jpg}" alt="featureImg" height="500" width="500">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span
+                            class="text-body-secondary">See for yourself.</span></h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an
+                        idea of how this layout would work with some actual real-world content in place.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img th:src="@{/images/img2.jpg}" alt="featureImg" height="500" width="500">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
+                            class="text-body-secondary">Checkmate.</span></h2>
+                    <p class="lead">And yes, this is the last block of representative placeholder content.
+                        Again, not really intended to be actually read, simply here to give you a better view of
+                        what this would look like with some actual content. Your content.</p>
+                </div>
+                <div class="col-md-5">
+                    <img th:src="@{/images/img.jpg}" alt="featureImg" height="500" width="500">
+                </div>
+            </div>
+            <hr class="featurette-divider" id="about">
+        </div>
+
+
+        <!-- 
+        <div class="my-5">
+            <div class="p-5 text-center bg-body-tertiary">
+                <div class="container py-5">
+                    <h1 class="text-body-emphasis">About us</h1>
+                    <p class="col-lg-8 mx-auto lead">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti rerum cupiditate
+                        officia architecto corporis illum fugiat labore, tempore ipsa dignis <code>Lorem ipsum </code>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eaque?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">Lorem, ipsum dolor.</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <div class="col d-flex flex-column align-items-start gap-2">
+                    <h2 class="fw-bold text-body-emphasis">Lorem ipsum dolor sit amet.</h2>
+                    <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                        accusantium magnam aliquam quas tempore voluptas sequi omnis distinctio sint porro.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Lorem, ipsum.</a>
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#collection" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
+                            <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusamus, a.
+                            </p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#gear-fill" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
+                            <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Odio, architecto. </p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#speedometer" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
+                            <p class="text-body-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, amet!
+                            </p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#table" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
+                            <p class="text-body-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, amet!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="my-5">
+            <div class="p-5 text-center bg-body-tertiary">
+                <div class="container py-5">
+                    <h1 class="text-body-emphasis">About us</h1>
+                    <p class="col-lg-8 mx-auto lead">
+                        Mouryansh Technology Services offers Computer system validation, PLC validation services and
+                        Area/Equipment
+                        qualification/HVAC validation, Complete documentation services. Computer System Validation (CSV)
+                        is often
+                        referred to as software validation. Regulated companies perform validation projects to prove
+                        that their
+                        software or system is performing the way it is supposed to work, and not performing in ways that
+                        it isn’t
+                        intended to work. Our key focus area is to offer complete regulatory and compliance services as
+                        per 21
+                        CFR part 11, EU Annex- 11, GAMP5, Risk Assessment (MHRA & FDA), CSV Deliverables and Data
+                        Integrity (FDA).
+                        Validation, qualification, calibrations and ongoing management of manufacturing facilities,
+                        equipment,
+                        processes, systems and services play a vital role for regulated pharmaceutical industries and is
+                        the key
+                        to success of a firm in this highly regulated environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">Our Services</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <div class="col d-flex flex-column align-items-start gap-2">
+                    <h2 class="fw-bold text-body-emphasis">Computer System Validation</h2>
+                    <p class="text-body-secondary">Regulated companies perform validation projects to prove that their
+                        software or system is performing the way it is supposed to work, and not performing in ways that
+                        it
+                        isn’t intended to work.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#collection" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Area/Equipment Qualification</h4>
+                            <p class="text-body-secondary">Complete documentation services, including qualification of
+                                manufacturing facilities, equipment, processes, systems, and services.</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#gear-fill" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">HVAC Validation</h4>
+                            <p class="text-body-secondary">Ensuring the validation and ongoing management of HVAC
+                                systems in
+                                regulated pharmaceutical industries.</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#speedometer" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Complete Regulatory and Compliance Services
+                            </h4>
+                            <p class="text-body-secondary">Offering services as per 21 CFR part 11, EU Annex- 11, GAMP5,
+                                Risk
+                                Assessment (MHRA & FDA), CSV Deliverables, and Data Integrity (FDA).</p>
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                                <svg class="bi" width="1em" height="1em">
+                                    <use xlink:href="#table" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis">Validation Documentation Services</h4>
+                            <p class="text-body-secondary">Providing complete documentation services for validation
+                                projects in
+                                regulated industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="featurette-divider" id="contact">
+        <div class="my-5">
+            <div class="p-5 text-center bg-body-tertiary">
+                <div class="container py-5">
+                    <h1 class="text-body-emphasis">Contact us</h1>
+                    <p class="col-lg-8 mx-auto lead">
+                        This takes the basic jumbotron above and makes its background edge-to-edge with a
+                        <code>.container</code> inside to align content. Similar to above, it's been recreated with
+                        built-in grid and utility classes.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <form method="post" th:action="@{/submit}" th:object="${obj}">
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" th:field="*{firstName}" class="form-control" id="firstName" name="firstName"
+                            placeholder="First name" aria-label="First name" required>
+                    </div>
+                    <div class="col">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" th:field="*{lastName}" class="form-control" id="lastName" name="lastName"
+                            placeholder="Last name" aria-label="Last name" required>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" th:field="*{email}" class="form-control" id="email" name="email"
+                        placeholder="Email" required>
+                    <div class="invalid-feedback">Valid email is required.</div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="text" th:field="*{phoneNumber}" class="form-control" id="phoneNumber"
+                        name="phoneNumber" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" th:field="*{subject}" class="form-control" id="subject" name="subject"
+                        placeholder="Subject" required>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" th:field="*{message}" id="message" name="message"
+                        placeholder="Message" required></textarea>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="company" class="form-label">Company</label>
+                    <input type="text" th:field="*{company}" class="form-control" id="company" name="company"
+                        placeholder="Company" required>
+                </div>
+
+                <div class="d-grid col-6 mx-auto mt-3">
+                    <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+
+
+        <hr class="featurette-divider">
+
+    </div>
+</body>
+
+</html>
