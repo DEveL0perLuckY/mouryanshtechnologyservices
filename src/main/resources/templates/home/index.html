@@ -41,6 +41,8 @@
                 letter-spacing: -.05rem;
             }
 
+            
+
             @media (min-width: 40em) {
                 .carousel-caption p {
                     margin-bottom: 1.25rem;
@@ -62,8 +64,7 @@
 
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
@@ -89,7 +90,7 @@
                     </svg> -->
 
                     <div class="container">
-                        <div class="carousel-caption text-light">
+                        <div class="carousel-caption text-dark">
                             <h1>Computer Automation</h1>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In quisquam minima voluptatum
                                 dolorem dicta doloribus architecto sunt repudiandae impedit vero, maiores corporis
@@ -115,11 +116,14 @@
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                <img th:src="@{/images/left.png}" th:alt="left" width="50" height="50">
+                
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                <img th:src="@{/images/right.png}" th:alt="right" width="50" height="50">
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
@@ -131,19 +135,20 @@
         </style>
         <div class="container marketing">
             <div class="container px-4 py-5" id="featured-3">
-                <h2 class="pb-2 border-bottom">Columns with icons</h2>
+                <h2 class="pb-2 border-bottom">Featuers</h2>
                 <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                     <div class="feature col">
                         <div
-                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                            <img th:src="@{/images/svgIcon.png}" th:alt="svgIcon" width="50" height="50">
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-light bg-gradient fs-4 rounded-3">
+                            <img th:src="@{/images/blackSvg1.png}" th:alt="blackSvg1" width="50" height="50">
                         </div>
 
-                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                            sentence and probably just keep going until we run out of words.</p>
+                        <h3 class="fs-2 text-body-emphasis">Computer System Validation</h3>
+                        <p>Mouryansh Technology Services offers Computer system validation, PLC validation services and
+                            Area/Equipment
+                            qualification/HVAC validation, Complete documentation services.</p>
                         <a href="#" class="icon-link">
-                            Call to action
+                            Learn More
                             <svg class="bi">
                                 <use xlink:href="#chevron-right" />
                             </svg>
@@ -151,16 +156,17 @@
                     </div>
                     <div class="feature col">
                         <div style="margin-bottom: 4px;"
-                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                            <svg class="bi" width="1em" height="1em">
-                                <use xlink:href="#people-circle" />
-                            </svg>
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-light bg-gradient fs-4 rounded-3">
+                            <img th:src="@{/images/blackSvg2.png}" th:alt="blackSvg2"
+                                width="30" height="30">
+
                         </div>
-                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                            sentence and probably just keep going until we run out of words.</p>
+                        <h3 class="fs-2 text-body-emphasis">Regulatory Compliance</h3>
+                        <p>Our key focus area is to offer complete regulatory and compliance services as per 21 CFR part
+                            11, EU Annex- 11,
+                            GAMP5, Risk Assessment (MHRA & FDA), CSV Deliverables and Data Integrity (FDA).</p>
                         <a href="#" class="icon-link">
-                            Call to action
+                            Explore Now
                             <svg class="bi">
                                 <use xlink:href="#chevron-right" />
                             </svg>
@@ -168,16 +174,17 @@
                     </div>
                     <div class="feature col">
                         <div style="margin-bottom: 4px;"
-                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                            <svg class="bi" width="1em" height="1em">
-                                <use xlink:href="#toggles2" />
-                            </svg>
+                            class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-light bg-gradient fs-4 rounded-3">
+                            <img th:src="@{/images/blackSvg3.png}" th:alt="blackSvg3" width="30"
+                                height="30">
+
                         </div>
-                        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                            sentence and probably just keep going until we run out of words.</p>
+                        <h3 class="fs-2 text-body-emphasis">Validation Management</h3>
+                        <p>Validation, qualification, calibrations and ongoing management of manufacturing facilities,
+                            equipment, processes,
+                            systems and services play a vital role for regulated pharmaceutical industries.</p>
                         <a href="#" class="icon-link">
-                            Call to action
+                            Get Started
                             <svg class="bi">
                                 <use xlink:href="#chevron-right" />
                             </svg>
@@ -253,86 +260,6 @@
         </div>
 
 
-        <!-- 
-        <div class="my-5">
-            <div class="p-5 text-center bg-body-tertiary">
-                <div class="container py-5">
-                    <h1 class="text-body-emphasis">About us</h1>
-                    <p class="col-lg-8 mx-auto lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti rerum cupiditate
-                        officia architecto corporis illum fugiat labore, tempore ipsa dignis <code>Lorem ipsum </code>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eaque?
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container px-4 py-5">
-            <h2 class="pb-2 border-bottom">Lorem, ipsum dolor.</h2>
-
-            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-                <div class="col d-flex flex-column align-items-start gap-2">
-                    <h2 class="fw-bold text-body-emphasis">Lorem ipsum dolor sit amet.</h2>
-                    <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                        accusantium magnam aliquam quas tempore voluptas sequi omnis distinctio sint porro.</p>
-                    <a href="#" class="btn btn-primary btn-lg">Lorem, ipsum.</a>
-                </div>
-
-                <div class="col">
-                    <div class="row row-cols-1 row-cols-sm-2 g-4">
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#collection" />
-                                </svg>
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
-                            <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Accusamus, a.
-                            </p>
-                        </div>
-
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#gear-fill" />
-                                </svg>
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
-                            <p class="text-body-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Odio, architecto. </p>
-                        </div>
-
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#speedometer" />
-                                </svg>
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
-                            <p class="text-body-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, amet!
-                            </p>
-                        </div>
-
-                        <div class="col d-flex flex-column gap-2">
-                            <div
-                                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#table" />
-                                </svg>
-                            </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">Lorem, ipsum.</h4>
-                            <p class="text-body-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, amet!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div class="my-5">
             <div class="p-5 text-center bg-body-tertiary">
                 <div class="container py-5">
@@ -378,9 +305,9 @@
                         <div class="col d-flex flex-column gap-2">
                             <div
                                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#collection" />
-                                </svg>
+                                <img th:src="@{/images/whiteSvg1.png}" th:alt="whiteSvg1"
+                                    width="30" height="30">
+
                             </div>
                             <h4 class="fw-semibold mb-0 text-body-emphasis">Area/Equipment Qualification</h4>
                             <p class="text-body-secondary">Complete documentation services, including qualification of
@@ -390,9 +317,9 @@
                         <div class="col d-flex flex-column gap-2">
                             <div
                                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#gear-fill" />
-                                </svg>
+
+                                <img th:src="@{/images/whiteSvg2.png}" th:alt="whiteSvg1"
+                                    width="30" height="30">
                             </div>
                             <h4 class="fw-semibold mb-0 text-body-emphasis">HVAC Validation</h4>
                             <p class="text-body-secondary">Ensuring the validation and ongoing management of HVAC
@@ -403,9 +330,8 @@
                         <div class="col d-flex flex-column gap-2">
                             <div
                                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#speedometer" />
-                                </svg>
+                                <img th:src="@{/images/whiteSvg3.png}" th:alt="whiteSvg3"
+                                    width="30" height="30">
                             </div>
                             <h4 class="fw-semibold mb-0 text-body-emphasis">Complete Regulatory and Compliance Services
                             </h4>
@@ -417,9 +343,9 @@
                         <div class="col d-flex flex-column gap-2">
                             <div
                                 class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
-                                    <use xlink:href="#table" />
-                                </svg>
+                                <img th:src="@{/images/whiteSvg4.png}" th:alt="whiteSvg4"
+                                    width="30" height="30">
+
                             </div>
                             <h4 class="fw-semibold mb-0 text-body-emphasis">Validation Documentation Services</h4>
                             <p class="text-body-secondary">Providing complete documentation services for validation
