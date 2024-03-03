@@ -42,8 +42,7 @@ public class HomeController {
             redirectAttributes.addFlashAttribute(WebUtils.MSG_SUCCESS,
                     WebUtils.getMessage(
                             "You have already submitted a message. Please wait 5 min before submitting again."));
-
-            return "redirect:/";
+            return "redirect:";
         }
 
         LocalDateTime currentTime = LocalDateTime.now();
@@ -53,13 +52,13 @@ public class HomeController {
         String formattedDateTime = currentTime.format(formatter);
 
         sendEmail(inquiryDTO, formattedDateTime);
-
+        userSubmissionMap.put(inquiryDTO.getEmail(), currentTime);
         String successMessage = String.format("Success message sent by %s %s",
                 inquiryDTO.getFirstName(), inquiryDTO.getLastName());
 
         redirectAttributes.addFlashAttribute(WebUtils.MSG_SUCCESS, WebUtils.getMessage(successMessage));
         redirectAttributes.addFlashAttribute("FORMATTED_DATE_TIME", formattedDateTime);
-        return "redirect:/";
+        return "redirect:";
     }
 
     private void sendEmail(InquiryDTO inquiryDTO, String formattedDateTime) {

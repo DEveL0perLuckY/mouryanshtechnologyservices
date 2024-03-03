@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
-    <title layout:title-pattern="$CONTENT_TITLE | $LAYOUT_TITLE">[[#{app.title}]]</title>
+    <title>Mouryansh Technology Services</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -57,9 +57,9 @@
         <div th:if="${MSG_SUCCESS}" class="position-fixed top-0 end-0 p-3 z-1" style="margin-top: 60px;">
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="myToast">
                 <div class="toast-header">
-                    <img th:src="@{/images/logo.png}" height="20" width="auto" class="rounded me-2" alt="img">
-                    <strong class="me-auto">WebApp</strong>
-                    <small th:text="${FORMATTED_DATE_TIME}">1 sec ago</small>
+                    <img th:src="@{/images/logo.png}" height="30" width="30" class="rounded me-2" alt="img">
+                    <strong class="me-auto">Mouryansh Technology Services</strong>
+                    <small th:text="${FORMATTED_DATE_TIME}"></small>
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body">
